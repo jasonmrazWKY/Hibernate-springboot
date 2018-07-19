@@ -1,0 +1,15 @@
+server:
+    port: 8090  
+    context-path: /demo
+
+
+####自定义参数#####
+content: hello
+
+dhht: 
+   name: wky
+   age: 18
+  
+  
+ 
+ 
