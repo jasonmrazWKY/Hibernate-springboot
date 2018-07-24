@@ -1,5 +1,7 @@
 package com.dhht.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,10 +19,11 @@ public class LoginController {
 	private LoginService loginservice;
    
 	@RequestMapping("login")
-	public String checkLogin(User user){
+	public String checkLogin(User user,HttpServletRequest request){
 		System.out.println(user.getName()+"\t"+user.getPassword());
 		AccessResult ac = loginservice.login(user.getName(), user.getPassword());
 		if(ac.isSuccess()) {
+			request.setAttribute("userName", user.getName());
 			return "success";
 		}
 		return "index";

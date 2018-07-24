@@ -10,6 +10,7 @@ import com.dhht.common.AccessResult;
 import com.dhht.dao.BaseDao;
 import com.dhht.entity.User;
 import com.dhht.utils.DaoUtil;
+import com.dhht.utils.WebUtil;
 
 @Service
 public class LoginService {
@@ -24,6 +25,7 @@ public class LoginService {
 		String hql = DaoUtil.getFindPrefix(User.class)+" where name =:userName and password =:password";
 		User user = userDao.get(hql, params);
 		if(user!=null) {
+			WebUtil.setLoginUser(user);
 			return new AccessResult(true,"success");
 		}
 		return new AccessResult(false,"false");

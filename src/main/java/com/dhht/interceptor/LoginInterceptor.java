@@ -17,7 +17,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 			throws Exception {
 		// TODO Auto-generated method stub
 		log.info("------进入preHandle------");
-		System.out.println(request.getServletPath());
+		System.out.println("请求路径："+request.getServletPath());
 		// 获取session
 //		HttpSession session = request.getSession(true);
 //		// 判断用户ID是否存在，不存在就跳转到登录界面

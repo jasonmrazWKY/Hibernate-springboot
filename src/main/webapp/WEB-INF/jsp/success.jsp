@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	登录成功
+	${userName}:登录成功 ${loginUser.name}
 </body>
 </html>
