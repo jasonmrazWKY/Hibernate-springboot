@@ -24,13 +24,11 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("/users")
-	//@Transactional(propagation=Propagation.SUPPORTS)
 	public  List<User> getUsers(){
 		return userService.getList();
 	}
 	
 	@GetMapping("/saveUser")
-	//@Transactional(propagation=Propagation.REQUIRED)
 	public AccessResult saveUser(@RequestParam(value="name",required=true) String name,@RequestParam(value="age") Integer age) {
 		User u = new User();
 		u.setName(name);
