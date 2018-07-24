@@ -1,6 +1,12 @@
 spring:
   profiles:
     active: dev
+  
+  
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
     
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -12,11 +18,12 @@ spring:
     database: MYSQL
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: update  #(create, create-drop, update)jpa自动建表
     properties:
       hibernate:
        dialect:  org.hibernate.dialect.MySQL5Dialect
        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext  #最后一个比较重要
+       
        
        
     

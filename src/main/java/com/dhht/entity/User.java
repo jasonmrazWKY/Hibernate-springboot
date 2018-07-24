@@ -21,6 +21,9 @@ public class User implements Serializable{
     
     @Column(columnDefinition = "INT(10) Comment  '年龄'" )
 	private Integer age;
+    
+    @Column(columnDefinition = "varchar(100) Comment  '密码'")
+    private String password;
 
 	public String getId() {
 		return id;
@@ -45,4 +48,13 @@ public class User implements Serializable{
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 }

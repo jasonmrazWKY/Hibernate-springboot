@@ -1,6 +1,6 @@
 server:
     port: 8090  
-    context-path: /demo
+   #context-path: /demo
 
 
 ####自定义参数#####

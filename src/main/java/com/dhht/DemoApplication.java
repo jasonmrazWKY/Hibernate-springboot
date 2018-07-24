@@ -16,16 +16,12 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 @ComponentScan(basePackages= {"com.dhht.*"}) //不加默认为启动类所在的包的里的对象
 //@ImportResource("classpath:transaction.xml")
-public class DemoApplication extends SpringBootServletInitializer{
+public class DemoApplication {
 
+	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	
-	@Override//为了打包springboot项目
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(this.getClass());
-    }
 	
 	//sessionFactory,hibernate必须的
     @Bean
