@@ -36,6 +36,13 @@ public class HelloController {
 		return mv;
 	}
 	
+	@RequestMapping("/hello2")
+	public ModelAndView showPage1() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("hello");
+		return mv;
+	}
+	
 	//重定向
 	@RequestMapping("/redirect")
 	public ModelAndView redirect() {

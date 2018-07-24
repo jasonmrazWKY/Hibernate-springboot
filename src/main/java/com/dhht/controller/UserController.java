@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.dhht.common.AccessResult;
 import com.dhht.entity.User;
@@ -35,5 +36,12 @@ public class UserController {
 		u.setAge(age);
 		AccessResult ac = userService.saveUser(u);
 		return ac; 
+	}
+	
+	@RequestMapping("gologin")
+	public ModelAndView gologin() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("hello");
+		return mv;
 	}
 }
