@@ -18,7 +18,7 @@ public class HelloController {
 	@Autowired
 	private DhhtEntity dhhtEntity;
 	
-	@PostMapping("/hello")
+	@RequestMapping("/hello")
 	public  String hello() {
 		return "HELLO WORLD:"+content;
 	}
@@ -28,16 +28,17 @@ public class HelloController {
 		return dhhtEntity.getName()+";"+dhhtEntity.getAge();
 	}
 	
-	//视图
-	@RequestMapping("/hello1")
-	public ModelAndView showPage() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("hello");
-		return mv;
-	}
+//	//视图
+//	@RequestMapping("/hello1")
+//	public ModelAndView showPage() {
+//		ModelAndView mv = new ModelAndView();
+//		mv.setViewName("hello");
+//		return mv;
+//	}
 	
 	@RequestMapping("/hello2")
 	public ModelAndView showPage1() {
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@");
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("hello");
 		return mv;

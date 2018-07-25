@@ -39,9 +39,10 @@ public class UserController {
 	}
 	
 	@RequestMapping("gologin")
-	public ModelAndView gologin() {
+	public ModelAndView gologin(){
+		System.out.println("####################");
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("hello");
+		mv.setViewName("user/gologin");
 		return mv;
 	}
 }

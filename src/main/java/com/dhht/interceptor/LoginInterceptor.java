@@ -22,7 +22,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 		log.info("------进入preHandle------");
 		System.out.println("请求路径："+request.getServletPath());
 		// 获取session
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession();
 		// 判断用户是否存在，不存在就跳转到登录界面
 		User loginUser = WebUtil.getLoginUser();
         if(loginUser == null) {

@@ -38,6 +38,7 @@ public class WebUtil {
      * @param user
      */
     public static void setLoginUser(User user) {
+    	System.out.println("attributes:"+attributes);
         getSession().setAttribute("loginUser", user);
     }
 
@@ -47,6 +48,7 @@ public class WebUtil {
      * @return
      */
     public static User getLoginUser() {
+    	System.out.println("attributes:"+attributes);
         return (User) getSession().getAttribute("loginUser");
     }
 
@@ -56,6 +58,7 @@ public class WebUtil {
      * @return
      */
     public static String getLoginUserId() {
+    	System.out.println("attributes:"+attributes);
         return getLoginUser().getId();
     }
 
@@ -65,6 +68,7 @@ public class WebUtil {
      * @return
      */
     public static HttpSession getSession() {
+    	System.out.println("attributes:"+attributes);
         return getRequest().getSession();
     }
 
@@ -82,6 +86,7 @@ public class WebUtil {
      * @return
      */
     public static HttpServletResponse getResponse() {
+    	System.out.println("attributes:"+attributes);
         return attributes.getResponse();
     }
 
@@ -91,6 +96,7 @@ public class WebUtil {
      * @return
      */
     public static HttpServletRequest getRequest() {
+    	System.out.println("attributes:"+attributes);
     	return attributes.getRequest();
     }
 

@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.dhht.interceptor.LoginInterceptor;
 
+
 @Configuration 
 public class WebConfig extends WebMvcConfigurerAdapter{
 
@@ -15,7 +16,7 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 	public void addInterceptors(InterceptorRegistry registry) {
 		System.out.println("addInterceptors");
 		//拦截规则：除了login，其他都拦截判断
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/user/gologin","/");
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","/user/gologin","/","/error");
 		super.addInterceptors(registry);
 	}
 

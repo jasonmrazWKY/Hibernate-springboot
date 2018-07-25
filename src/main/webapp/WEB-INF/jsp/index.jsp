@@ -7,7 +7,7 @@
 <title>登录页面</title>
 </head>
 <body>
-    <form action="login" method="post">
+    <form action="${pageContext.request.contextPath}/login" method="post">
 		用户帐号<input type=text name="name" size="18" value=""><br>
 		登录密码<input type="password" name="password" size="19" value="" /> <br>
 		<input type=submit name="submit1" value="登陆">
